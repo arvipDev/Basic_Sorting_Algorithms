@@ -1,0 +1,47 @@
+recursive bubble sort {
+	Base Case: If array size is 1, return.
+	Do One Pass of normal Bubble Sort. This pass fixes last element of current subarray.
+	Recur for all elements except last of current subarray.
+}
+
+merge sort {
+	2 methods Sort and Merge.
+	Merge will compare the elements form 2 sorted arrays, Left and Right and push to the main array. It has one argument - maina array.
+	Sort will divide an array into 2 parts, Left and Right. It has 3 arguments - main, left and right arrays.
+	steps - 1) Merge - assume left and right arrrays are sorted individually. Compare the left array elements with right array and push them to the main array.
+		consider conditions where all left/right elements are emptied. Now push the entire other array to the main array.
+	2) Sort - Divide the array into 2 - left and right array.
+	3) Sort - recursive call the Sort array by passing the left array as argument first followed by right array.
+	4) Call Merge method passing the sort's argument array, left and right array.
+	https://www.youtube.com/watch?v=TzeBrDU-JaY
+}
+
+quick sort {
+	2 methods Partition and Sort.
+	Partition - select the end element of a given array and place it such that all elements to its left are less than the element and all on the right are greater.
+	It has 3 arguments - array, start and end index and return partition element index (int).
+	Sort - gets the pivot from partition method and uses it to split the array into 2, lesser than pivot element and greater than pivot element.
+	It has 3 arguments - array, start and end. Returns an array.
+}
+
+sorting {
+	selection sort - push the biggest or smallest number to the left. Compare one element with every element that comes after. Need to remember element and its index.
+	N^2 to N^2. Not Stable. In-place algorithm
+
+	bubble sort - push the biggest or smallest number to the right. Compare one element with the very next element and swap if necessary.
+	N to N^2. Stable. In-place algorithm
+
+	insertion sort - compare one element with elements that comes before it and place the element in the appropriate place.(check if the element before it is less than element and swap)
+	N to N^2. Stable. In-place algorithm
+
+	merge sort - Divide and Conquer.
+	NlogN to NlogN. Stable. LinkedList. Not an In-place algorithm, arrays are created.
+
+	quick sort - Divide and Conquer.
+	NlogN to N^2. Unstable. In-place algorithm
+
+	Bucket sort - using arraylist.
+
+	Tim sort - Arrays in Java and Python use this algo to sort. It is a hybread algo consisting insertion sort and merg sort.
+	NlogN with a lowest constant amongst comparision sorting. Breaks large arrays into smaller 32 to 64 size arrays and sorts it using binary insertion sorting after which it is merged using merg sorting algo.
+}
